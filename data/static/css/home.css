@@ -1,0 +1,27 @@
+.content {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 95vh;
+}
+.block {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    border: 1px rgba(10,10,10, 0.2) solid;
+    border-radius: 15px;
+    margin: 3px;
+    background: #C8D9E5;
+    color: #1A2B37;
+    text-decoration: none; /* no underline */
+    font-size: 2em;
+}
+.block:hover {
+    background: #9EBCD1;
+    transition: 0.2s;
+    cursor: pointer;
+}
+* {
+    font-family: sans-serif;
+}

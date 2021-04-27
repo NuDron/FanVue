@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Genre View</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/basic_style.css' %}" />
+</head>
+<body>
+<div class="l_menu">
+    {% for each in l_menu %}
+            <a class="select_btn" href="{% url 'genre' pk=each.pk %}">{{ each }}</a>
+    {% endfor %}
+</div>
+<div class="m_content">
+    <h4 class="content_title">{{ title }}</h4>
+    {% for each in content %}
+        <div class="cont_piece">
+            <div class="cont_name">{{ each }}</div>
+            <div class="action_btns">
+                <a href="{% url 'artist' pk=each.pk %}">View</a>
+                <div title="placeholder">Add</div>
+                <div title="placeholder">Remove</div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+</body>
+</html>

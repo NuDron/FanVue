@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home View</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+</head>
+<body class="content">
+{% for each in genres %}
+    <a href="{% url 'genre' pk=each.pk %}" class="block">{{ each }}</a>
+{% endfor %}
+</body>
+</html>
