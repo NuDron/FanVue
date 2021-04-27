@@ -31,6 +31,7 @@ class ArtistDetail(mixins.RetrieveModelMixin,
     lookup_field = 'id'
 
 
+# TODO: Method GET not allowed
 class AlbumDetail(mixins.RetrieveModelMixin,
                   mixins.UpdateModelMixin,
                   mixins.DestroyModelMixin,
